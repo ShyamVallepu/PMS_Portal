@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PensionerInput } from '../models/pensioner-input';
 import { ProcessPensionInput } from '../models/process-pension-input';
 import { ProcessPensionResponse } from '../models/process-pension-response';
 
@@ -11,8 +10,8 @@ import { ProcessPensionResponse } from '../models/process-pension-response';
 export class ProcessPensionService {
 
   // add your base URL here
-  baseUrl: string = 'https://localhost:44394/api/ProcessPension';
-  BaseUrl:string = 'https://localhost:44391/api';
+  baseUrl: string = 'https://processpensionwebservice.azurewebsites.net/api/ProcessPension';
+  //BaseUrl:string = 'https://localhost:44391/api';
  
 
   constructor(private http: HttpClient) { }
@@ -23,8 +22,8 @@ export class ProcessPensionService {
   }
 
   // Method to get pension details
-  addPensionDetails(pensionerInput: PensionerInput){
-    return this.http.post(`${this.BaseUrl}/PensionerDetail/Add`, pensionerInput,{responseType: 'text'});
-  }
+  //addPensionDetails(pensionerInput: PensionerInput){
+    //return this.http.post(`${this.BaseUrl}/PensionerDetail/Add`, pensionerInput,{responseType: 'text'});
+  //}
 
 }
