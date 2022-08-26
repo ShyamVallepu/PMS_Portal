@@ -14,7 +14,7 @@ export class AuthService {
   ) { }
 
   // set your base URL here
-  baseUrl: string = 'https://shyamuserauthorization.azurewebsites.net/api'
+  baseUrl: string = 'http://20.81.16.62/api'
 
   // hit the backend to login
   // returns error message for invalid login credentials

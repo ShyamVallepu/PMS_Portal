@@ -10,7 +10,7 @@ import { ProcessPensionResponse } from '../models/process-pension-response';
 export class ProcessPensionService {
 
   // add your base URL here
-  baseUrl: string = 'https://processpensionwebservice.azurewebsites.net/api/ProcessPension';
+  baseUrl: string = 'http://52.226.233.27/api/ProcessPension';
   //BaseUrl:string = 'https://localhost:44391/api';
  
 
@@ -20,10 +20,5 @@ export class ProcessPensionService {
   processPension(processPensionInput: ProcessPensionInput): Observable<ProcessPensionResponse> {
     return this.http.post<ProcessPensionResponse>(`${this.baseUrl}/ProcessPension`, processPensionInput);
   }
-
-  // Method to get pension details
-  //addPensionDetails(pensionerInput: PensionerInput){
-    //return this.http.post(`${this.BaseUrl}/PensionerDetail/Add`, pensionerInput,{responseType: 'text'});
-  //}
 
 }
